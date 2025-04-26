@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     environment {
-        IMAGE_NAME = 'deepak3917/myc1:latest'
+        IMAGE_NAME = 'deepak3917/myp1:latest'
     }
 
     stages {
@@ -14,7 +14,7 @@ pipeline {
 
         stage('Build Docker Image') {
             steps {
-                bat 'docker build -t deepak3917/myc1:latest .'
+                bat 'docker build -t deepak3917/myp1:latest .'
             }
         }
 
