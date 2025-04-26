@@ -11,7 +11,7 @@ pipeline {
         stage('Build Docker Image') {
             steps {
                 script {
-                    sh 'docker build -t myportfolio:latest .'
+                    sh 'docker build -t deepak3917/myp1:latest .'
                 }
             }
         }
@@ -28,7 +28,7 @@ pipeline {
         stage('Run New Container') {
             steps {
                 script {
-                    sh 'docker run -d -p 2020:80 --name portfolio-container myportfolio:latest'
+                    sh 'docker run -d -p 2020:80 --name portfolio-container deepak3917/myp1:latest'
                 }
             }
         }
@@ -36,7 +36,7 @@ pipeline {
 
     post {
         always {
-            echo '✅ Deployment finished.'
+            echo '✅ Portfolio deployment finished.'
         }
     }
 }
