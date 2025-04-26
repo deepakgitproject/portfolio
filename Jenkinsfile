@@ -4,7 +4,8 @@ pipeline {
     stages {
         stage('Clone Repository') {
             steps {
-                git 'https://github.com/deepakgitproject/portfolio.git'
+                // Make sure to use the correct GitHub URL for your repository
+                git branch: 'main', url: 'https://github.com/deepakgitproject/portfolio.git'
             }
         }
 
