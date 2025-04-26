@@ -14,7 +14,7 @@ pipeline {
 
         stage('Build Docker Image') {
             steps {
-                bat 'docker build -t deepak3917/myp1:latest .'
+                sh 'docker build -t deepak3917/myp1:latest .'
             }
         }
 
